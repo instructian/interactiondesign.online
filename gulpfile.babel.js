@@ -132,6 +132,14 @@ function images() {
     })))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
 }
+//GULP Copy
+//gulp.src(['src/pages/CNAME']).pipe(gulp.dest(PATHS.dist));
+function cname() {
+  return gulp.src([
+      'src/pages/CNAME'
+  ])
+  .pipe(gulp.dest(PATHS.dist));
+}
 
 // Start a server with BrowserSync to preview the site in
 function server(done) {
